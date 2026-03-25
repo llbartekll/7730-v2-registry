@@ -357,5 +357,7 @@
   "eip155:42161:0xbd89a1ce4dde368ffab0ec35506eece0b1ffdc54": "registry/safe/calldata-SafeToL2Setup-1.4.1.json",
   "eip155:11155111:0xbd89a1ce4dde368ffab0ec35506eece0b1ffdc54": "registry/safe/calldata-SafeToL2Setup-1.4.1.json",
   "eip155:1:0x900c7589200010d6c6ecaae5b06ebe653bc2d82a": "registry/safe/calldata-SafeToL2Setup-1.5.0.json",
-  "eip155:11155111:0x900c7589200010d6c6ecaae5b06ebe653bc2d82a": "registry/safe/calldata-SafeToL2Setup-1.5.0.json"
+  "eip155:11155111:0x900c7589200010d6c6ecaae5b06ebe653bc2d82a": "registry/safe/calldata-SafeToL2Setup-1.5.0.json",
+  "eip155:1:0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2": "registry/weth/calldata-weth.json",
+  "eip155:11155111:0xfff9976782d46cc05630d1f6ebab18b2324d6b14": "registry/weth/calldata-weth.json"
 }

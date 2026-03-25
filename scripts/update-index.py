@@ -27,6 +27,11 @@ def main():
     with open(INDEX_PATH) as f:
         index = json.load(f)
 
+    # Normalize existing string values to arrays
+    for key in index:
+        if isinstance(index[key], str):
+            index[key] = [index[key]]
+
     added = 0
     for folder in FOLDERS:
         abs_folder = os.path.join(REGISTRY_ROOT, folder)
@@ -49,10 +54,16 @@ def main():
 
             for dep in deployments:
                 key = make_key(dep["chainId"], dep["address"])
-                if key not in index:
-                    index[key] = rel_path
+                paths = index.setdefault(key, [])
+                if rel_path not in paths:
+                    paths.append(rel_path)
                     print(f"  + {key} -> {rel_path}")
                     added += 1
+
+    # Collapse single-element arrays back to strings for compactness
+    for key in index:
+        if isinstance(index[key], list) and len(index[key]) == 1:
+            index[key] = index[key][0]
 
     with open(INDEX_PATH, "w") as f:
         json.dump(index, f, indent=2)

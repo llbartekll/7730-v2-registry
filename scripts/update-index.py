@@ -7,7 +7,7 @@ import os
 REGISTRY_ROOT = os.path.join(os.path.dirname(__file__), "..")
 INDEX_PATH = os.path.join(REGISTRY_ROOT, "index.json")
 
-FOLDERS = ["registry/lifi", "registry/safe", "registry/weth"]
+FOLDERS = ["ercs", "registry/lifi", "registry/safe", "registry/weth", "registry/tether", "registry/circle"]
 
 
 def make_key(chain_id: int, address: str) -> str:
